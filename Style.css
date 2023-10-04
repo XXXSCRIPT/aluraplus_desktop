@@ -1,0 +1,209 @@
+:root{
+    --branco_principal: #ffffff;
+    --cinza_secundario:#C0C0C0;
+    --botao_azul: #167BF7;
+    --cor_de_fundo:#00030C;
+    --font-principal: 'Inter';
+    --botao_azul-efeito:hsl(213, 44%, 32%);
+
+
+}
+
+/*configurações principais*/
+
+body{
+    background-color: var(--cor_de_fundo);
+    color: var(--branco_principal);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*configurações da section principal*/
+
+.conteiner{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.principal{
+    background-image: url(Background.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    align-items: center;
+    text-align: center;
+}
+
+.conteiner__caixa{
+    margin: 0 6em;
+}
+
+.conteiner__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.conteiner__imagemcombo{
+    margin: 1em 0 2em 0;
+}
+
+.conteiner__botao{
+    background-color: var(--botao_azul);
+    border-radius: 5px;
+    padding: 1em;
+    text-decoration: none;
+    margin-bottom: 1em;
+    color: var(--branco_principal);
+    display: block;
+
+}
+
+.botao_secundario{
+   background-color: transparent;
+   border: 2px solid var(--branco_principal);
+}
+
+.conteiner__aviso{
+    font-size: 12px;
+    color: var(--cinza_secundario);
+}
+
+/*sessão secundaria(Não precisa adicionar o conteirner porque ele
+pegou a heraça do primeiro conteiner da section*/
+
+.secundario{
+    align-items: center;
+    margin: 0 8em;
+}
+
+.secundario_img{
+    width: 80%;
+}
+
+.secundario_titulo{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco_principal);
+    margin-bottom: 0.3em;
+}
+
+.secundario_paragrafo{
+    color: var(--cinza_secundario);
+}
+.secundario_botao{
+    display: inline-block;
+    margin-top: 2em;
+}
+.conteiner__descricao{
+    padding: 2em;
+}
+
+/*sessão flex dos dispositivos em lista*/
+
+.dispositivos{
+ text-align: center;  
+}
+
+.dispositivos_titulo{
+    font-size: 48px;
+    color: var(--branco_principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco_principal);
+
+}
+
+/*sessão do footer*/
+.rodape {
+    text-align: center;
+    margin: 5em 3em;}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em 0;
+}
+
+/*Quando for fazero estilo da lista e ela for uma ancora, use a tag a depois da classe*/
+
+.lista__link a{
+    margin-top: 1em;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--branco-principal);
+    margin-left: 1em;
+    margin-bottom: 1em 0;
+}
+
+.rodape__texto{
+    font-size: 12px;
+    margin: 1em;
+    color: var(--cinza_secundario);
+}
+
+/*Efeitos*/
+
+.lista__link a:hover{
+    color:var(--botao_azul);
+}
+
+.lista__link a:active{
+    color: purple;
+}
+
+.conteiner__botao:hover{
+    color: var(--branco_principal);
+    background-color: var(--botao_azul-efeito);
+}
+
+ @media (max-width:800px) {
+    .conteiner{
+        display: block;
+        background-image: none; 
+               
+    }
+    .conteiner__imagemcombo{
+        width: 50vw;
+    }
+
+    .conteiner__caixa{
+        margin: 2em 2em;
+    }
+    .secundario{
+        margin: 0;
+        text-align: center;
+    }
+    .secundario_img{
+        width: 50vw;
+    }
+    .dispositivos__lista{
+        display: block;
+    }
+    .rodape__lista{
+        display: block;
+    }
+    .secundario {
+        margin-bottom: 1em;
+    }
+
+    .dispositivos_titulo{
+        font-size: 3rem;
+    }
+    
+}
